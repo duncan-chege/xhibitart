@@ -1,13 +1,12 @@
 <?php 
     function main_files(){
-        wp_enqueue_style('custom-google-font', '//fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap', false);
-        wp_enqueue_style('bootstrap4', '//stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css');
+        wp_enqueue_style( 'custom-google-font', '//fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap', false);
+        wp_enqueue_style( 'bootstrap5', '//cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css');
         wp_enqueue_style( 'custom-style',  get_template_directory_uri().'/assets/css/custom.css');
-        wp_enqueue_style('main-css', get_stylesheet_uri());
+        wp_enqueue_style( 'main-css', get_stylesheet_uri());
     
-        wp_enqueue_script( 'jQuery','//code.jquery.com/jquery-3.2.1.slim.min.js', array('jquery'));
-        wp_enqueue_script( 'popper','//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', array('jquery'));
-        wp_enqueue_script( 'bootstrap-js','//stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js', array('jquery'));
+        wp_enqueue_script( 'popper','//cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js');
+        wp_enqueue_script( 'bootstrap-js','//cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js');
         wp_enqueue_script( 'main-js', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), null, true );
     }
 
