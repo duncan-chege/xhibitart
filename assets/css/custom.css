@@ -1,0 +1,39 @@
+button{
+    outline: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+img{
+    height: auto;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.front-page-hero{
+    background: url('../img/front-hero.jpg');
+    height: 70vh;
+}
+
+.main-logo h4 {
+    color: #fff;
+    float: right;
+    padding: 10px;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+.footer{
+    background: #000;
+    bottom: 0;
+    color: #fff;
+    padding-top: 15px;
+    position: absolute;
+    width: 100%;
+}
