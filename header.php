@@ -16,9 +16,8 @@
                 <!-- Brand and toggle button -->
                 <div class='main-logo'>
                     <a href="<?php echo home_url(); ?>"><img
-                            src="<?php echo get_template_directory_uri(); ?>/assets/img/white-logo.png"
-                            alt='viisual works logo'></a>
-                    <h4> <?php echo get_bloginfo('name'); ?> </h4>
+                            src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg"
+                            alt='xhibitart logo'></a>
                 </div>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -42,6 +41,7 @@
                         );
                     ?>
 
+                    <button type="button" class="btn btn-dark"> Curator SignUp </button>
                 </div>
                 <!-- End -->
             </div>

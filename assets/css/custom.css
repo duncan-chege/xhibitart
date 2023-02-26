@@ -1,39 +1,82 @@
-button{
-    outline: none;
+body{
+    background: rgba(255, 238, 148, 0.17);
+    font-family: 'Golos Text', sans-serif;
 }
 
-a:hover{
+h1{
+    font-weight: 800;
+}
+
+a,a:hover{
     text-decoration: none;
 }
 
 img{
-    height: auto;
-}
-
-body{
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-}
-
-.front-page-hero{
-    background: url('../img/front-hero.jpg');
-    height: 70vh;
-}
-
-.main-logo h4 {
-    color: #fff;
-    float: right;
-    padding: 10px;
-}
-
-.nav-link {
-    color: #fff !important;
-}
-
-.footer{
-    background: #000;
-    bottom: 0;
-    color: #fff;
-    padding-top: 15px;
-    position: absolute;
     width: 100%;
+}
+
+.navbar-nav{
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.nav-link{
+    color: #fff;
+    font-size: 18px;
+}
+
+.hero-section{
+    background: url('../img/hero-image.png') #c2c2c2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    color: #fff;
+}
+
+.hero-section img{
+    height: 70px;
+}
+
+.exhibition-prompts {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.exhibition-prompts a:first-child {
+    color: #fff;
+    background: #000;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.exhibition-prompts a:first-child {
+    color: #fff;
+    background: #000;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.exhibition-prompts a:last-child {
+    color: #000;
+    background: #c87513;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.exciting-exhibitions, .star-artists, .art-mediums{
+    margin: 5em 0 3em 0;
+}
+
+.featured-exhibition img, .exciting-exhibitions img, .star-artists img, .art-mediums img{
+    border-radius: 5px;
+}
+
+.featured-exhibition h2, .exciting-exhibitions h2, .star-artists h2, .art-mediums h2{
+    font-weight: 700;
+}
+
+.featured-exhibition img {
+    height: 300px;
+    object-fit: cover;
 }
