@@ -35,23 +35,40 @@
             <h2 class=" text-center mb-5"> Exciting Exhibitions This February </h2>
         </div>
 
-        <div class="col-md-4">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/featured-exhibition.png"
+        <?php
+        $args = array(
+            'post_type' => 'exhibitions',
+            'posts_per_page' => 3,
+        );
+        $the_query = new WP_Query($args); ?>
+
+        <?php if($the_query->have_posts()) : ?>
+            
+            <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                <div class="col-md-4">
+                    <a href="<?php get_permalink(); ?>"><?php the_post_thumbnail(); ?>
+                    <h5 class="mt-3"><?php the_title(); ?></h5></a>
+                </div>
+            <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
+
+        <?php else : ?>
+            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+        <?php endif; ?>
+
+       
+
+        <!-- <div class="col-md-4">
+            <img src="<?php //echo get_template_directory_uri(); ?>/assets/img/featured-exhibition.png"
                 alt="featured exhibition">
             <h5 class=" mt-3">Milwaukee Celebrates National Poetry Month</h3>
         </div>
 
         <div class="col-md-4">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/featured-exhibition.png"
+            <img src="<?php //echo get_template_directory_uri(); ?>/assets/img/featured-exhibition.png"
                 alt="featured exhibition">
             <h5 class=" mt-3">Milwaukee Celebrates National Poetry Month</h3>
-        </div>
-
-        <div class="col-md-4">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/featured-exhibition.png"
-                alt="featured exhibition">
-            <h5 class=" mt-3">Milwaukee Celebrates National Poetry Month</h3>
-        </div>
+        </div> -->
     </div>
 
     <div class="row star-artists">

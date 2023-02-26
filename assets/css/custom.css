@@ -70,6 +70,8 @@ img{
 
 .featured-exhibition img, .exciting-exhibitions img, .star-artists img, .art-mediums img{
     border-radius: 5px;
+    height: 250px;
+    object-fit: cover;
 }
 
 .featured-exhibition h2, .exciting-exhibitions h2, .star-artists h2, .art-mediums h2{
