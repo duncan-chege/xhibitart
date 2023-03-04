@@ -1,3 +1,10 @@
+:root{
+    --redish: #cf3005;
+    --light: #f1e0b1;
+    --yellow: #ffa821;
+    --brown: #422a20;
+}
+
 body{
     background: rgba(255, 238, 148, 0.17);
     font-family: 'Golos Text', sans-serif;
@@ -81,4 +88,10 @@ img{
 .featured-exhibition img {
     height: 300px;
     object-fit: cover;
+}
+
+.featured-exhibition h5{
+    color: var(--redish);
+    text-align: center;
+    margin: 2em 0;
 }
