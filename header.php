@@ -11,7 +11,7 @@
 
 <body <?php body_class(); ?>>
     <header class="">
-        <nav class="navbar navbar-light navbar-expand-sm fixed-top" role='navigation'>
+        <nav class="navbar navbar-light navbar-expand-sm" role='navigation'>
             <div class='container-fluid'>
                 <!-- Brand and toggle button -->
                 <div class='main-logo'>

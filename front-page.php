@@ -70,20 +70,6 @@
         <?php else : ?>
         <p><?php _e( 'Sorry, no exhibitions this month' ); ?></p>
         <?php endif; ?>
-
-
-
-        <!-- <div class="col-md-4">
-            <img src="<?php //echo get_template_directory_uri(); ?>/assets/img/featured-exhibition.png"
-                alt="featured exhibition">
-            <h5 class=" mt-3">Milwaukee Celebrates National Poetry Month</h3>
-        </div>
-
-        <div class="col-md-4">
-            <img src="<?php //echo get_template_directory_uri(); ?>/assets/img/featured-exhibition.png"
-                alt="featured exhibition">
-            <h5 class=" mt-3">Milwaukee Celebrates National Poetry Month</h3>
-        </div> -->
     </div>
 
     <div class="row star-artists">

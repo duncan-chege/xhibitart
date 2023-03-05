@@ -64,7 +64,7 @@ img{
     border-radius: 8px;
 }
 
-.exhibition-prompts a:last-child {
+.exhibition-prompts a:last-child, .book-slot {
     color: #000;
     background: #c87513;
     padding: 10px 15px;
@@ -94,4 +94,9 @@ img{
     color: var(--redish);
     text-align: center;
     margin: 2em 0;
+}
+
+.single-featured img{
+    height: 300px;
+    object-fit: cover;
 }
