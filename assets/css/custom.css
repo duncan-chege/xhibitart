@@ -97,6 +97,15 @@ img{
 }
 
 .single-featured img{
-    height: 300px;
+    height: 350px;
     object-fit: cover;
+}
+
+.woocommerce div.product div.images img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.woocommerce-page div.product div.images {
+    width: 100%;
 }

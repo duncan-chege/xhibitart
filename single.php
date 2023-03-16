@@ -9,7 +9,7 @@
             <h1 class='font-weight-bold my-4 text-center'><?php echo get_the_title(); ?></h1>
             <?php the_content(); ?>
             <div class="text-center my-5">
-                <a href="#" class="book-slot">Book Your Slot</a>
+                <!-- <a href="#" class="book-slot">Book Your Slot</a> -->
             </div>
         </div>
     </div>

@@ -11,6 +11,12 @@
 
     add_action('wp_enqueue_scripts', 'main_files');
 
+    function custom_single_product_image_html( $html, $post_id ) {
+        $post_thumbnail_id = get_post_thumbnail_id( $post_id );
+        return get_the_post_thumbnail( $post_thumbnail_id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ) );
+    }
+    add_filter('woocommerce_single_product_image_thumbnail_html', 'custom_single_product_image_html', 10, 2);
+
     function wpb_custom_new_menu() {
         register_nav_menu('my-custom-menu',__( 'My Custom Menu' ));
       }
@@ -37,6 +43,5 @@
         return $classes;
     }
     add_filter( 'body_class', 'add_slug_body_class' );
-
 
 ?>

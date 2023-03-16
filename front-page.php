@@ -61,7 +61,7 @@
 
         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
         <div class="col-md-4">
-            <a href="<?php get_permalink(); ?>"><?php the_post_thumbnail(); ?>
+            <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail(); ?>
                 <h5 class="mt-3"><?php the_title(); ?></h5></a>
         </div>
         <?php endwhile; ?>
