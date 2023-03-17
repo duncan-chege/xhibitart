@@ -121,4 +121,26 @@ a,a:hover{
 .summary.entry-summary.short-event-costs {
     float: left !important;
     margin-bottom: 0 !important;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    width: 100% !important;
 }
+
+input.input-text.qty.text::-webkit-outer-spin-button, input.input-text.qty.text::-webkit-inner-spin-button {
+    opacity: 1;
+}
+
+p.price, span.woocommerce-Price-amount.amount{
+    color: var(--redish) !important;
+}
+
+p.price{
+    font-size: 1.1em !important;
+    font-weight: 500;
+}
+
+.woocommerce div.product form.cart .button {
+    background-color: var(--redish);
+}
+
