@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="hero-section">
+<div class="front-hero-section">
     <div class="text-center">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/white-logo.svg" alt="main logo">
         <h1>Embrace Visual Art in Kenya</h1>
@@ -15,8 +15,7 @@
 
         <?php 
             $args = array(
-                'tag' => 'featured-exhibition',
-                'post_type' => 'exhibitions',
+                'product_tag' => 'featured-exhibition',
                 'posts_per_page' => 1,
             );
             $featured = new WP_Query($args); ?>
