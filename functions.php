@@ -44,4 +44,65 @@
     }
     add_filter( 'body_class', 'add_slug_body_class' );
 
+// Code to remove some billing details in woocommerce checkout page
+add_filter( 'woocommerce_checkout_fields' , 'simplify_checkout_virtual' );
+
+function simplify_checkout_virtual( $fields ) {
+
+   $only_virtual = true;
+
+   foreach( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+
+      // Check if there are non-virtual products
+      if ( ! $cart_item['data']->is_virtual() ) $only_virtual = false;  
+   }
+
+    if( $only_virtual ) {
+
+       unset($fields['billing']['billing_company']);
+
+       unset($fields['billing']['billing_address_1']);
+
+       unset($fields['billing']['billing_address_2']);
+
+       unset($fields['billing']['billing_city']);
+
+       unset($fields['billing']['billing_postcode']);
+
+       unset($fields['billing']['billing_country']);
+
+       unset($fields['billing']['billing_state']);
+
+       unset($fields['billing']['billing_phone']);
+
+       add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
+
+     }
+     return $fields;
+
+}
+
+//Change the 'Billing details' text on Checkout
+add_filter( 'gettext', 'wc_billing_field_strings', 20, 3 );
+
+function wc_billing_field_strings( $translated_text, $text, $domain ) {
+    switch ( $translated_text ) {
+    case 'Billing details' :
+    $translated_text = __( 'Attendee Details', 'woocommerce' );
+    break;
+    }
+    return $translated_text;
+}
+
+//Add Cart Feature on top of checkout forms in checkout page
+add_action( 'woocommerce_before_checkout_form', 'cart_on_checkout_page', 11 );
+ 
+function cart_on_checkout_page() {
+   echo do_shortcode( '[woocommerce_cart]' );
+}
+
+//Remove add to cart message
+add_filter( 'woocommerce_add_message', '__return_false' );
+
+// add_filter(  ); 
 ?>
