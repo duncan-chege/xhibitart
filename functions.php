@@ -11,6 +11,7 @@
 
     add_action('wp_enqueue_scripts', 'main_files');
 
+    // Remove zoom effect on woocommerce product image
     function custom_single_product_image_html( $html, $post_id ) {
         $post_thumbnail_id = get_post_thumbnail_id( $post_id );
         return get_the_post_thumbnail( $post_thumbnail_id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ) );
@@ -73,8 +74,6 @@ function simplify_checkout_virtual( $fields ) {
 
        unset($fields['billing']['billing_state']);
 
-       unset($fields['billing']['billing_phone']);
-
        add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
 
      }
@@ -104,5 +103,8 @@ function cart_on_checkout_page() {
 //Remove add to cart message
 add_filter( 'woocommerce_add_message', '__return_false' );
 
-// add_filter(  ); 
+//Cart page has been set to checkout page on woocommerce settings-advanced section
+
+//Add to cart text has been set to Book Ticket on Fooevents settings-general section
+
 ?>
