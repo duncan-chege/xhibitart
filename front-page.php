@@ -27,7 +27,7 @@
             <?php the_post_thumbnail(); ?>
         </div>
         <div class="col-md-6 py-3 ps-5">
-            <h3 class=""><?php the_title(); ?></h3>
+            <h3 class="text-center"><?php the_title(); ?></h3>
             <p><?php echo wp_trim_excerpt(); ?></p>
 
             <div class="exhibition-prompts my-4">
@@ -51,7 +51,7 @@
 
         <?php
         $args = array(
-            'post_type' => 'exhibitions',
+            'post_type' => 'product',
             'posts_per_page' => 3,
             'tag__not_in' => 3
         );
@@ -62,7 +62,7 @@
         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
         <div class="col-md-4">
             <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail(); ?>
-                <h5 class="mt-3"><?php the_title(); ?></h5></a>
+                <h5 class="mt-3" style="color: var(--redish);"><?php the_title(); ?></h5></a>
         </div>
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>

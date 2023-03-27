@@ -1,34 +1,37 @@
-:root{
+:root {
     --redish: #cf3005;
     --light: #f1e0b1;
     --yellow: #ffa821;
     --brown: #422a20;
 }
 
-body{
+body {
     background: rgba(255, 238, 148, 0.17);
     font-family: 'Golos Text', sans-serif;
 }
 
-h1{
+h1 {
     font-weight: 800;
 }
 
-a,a:hover{
+a,
+a:hover {
     text-decoration: none;
+    color: inherit;
 }
 
-.navbar-nav{
+.navbar-nav {
     justify-content: space-evenly;
     width: 50%;
 }
 
-.nav-link{
+.nav-link {
     color: #fff;
     font-size: 18px;
 }
 
-.front-hero-section, .page-hero-section{
+.front-hero-section,
+.page-hero-section {
     background: url('../img/hero-image.png') #c2c2c2;
     display: flex;
     align-items: center;
@@ -37,15 +40,15 @@ a,a:hover{
     color: #fff;
 }
 
-.hero-section img{
+.hero-section img {
     height: 70px;
 }
 
-.page-hero-section{
+.page-hero-section {
     height: 40vh;
 }
 
-.front-hero-section img{
+.front-hero-section img {
     height: 70px;
 }
 
@@ -61,24 +64,34 @@ a,a:hover{
     border-radius: 8px;
 }
 
-.exhibition-prompts a:last-child, .book-slot {
-    color: #000;
+.exhibition-prompts a:last-child,
+.book-slot, .back-exhibitions {
+    color: #1d1d1d;
     background: #c87513;
     padding: 13px 15px;
     border-radius: 8px;
+    font-weight: 700;
 }
 
-.exciting-exhibitions, .star-artists, .art-mediums{
+.exciting-exhibitions,
+.star-artists,
+.art-mediums {
     margin: 5em 0 3em 0;
 }
 
-.featured-exhibition img, .exciting-exhibitions img, .star-artists img, .art-mediums img{
+.featured-exhibition img,
+.exciting-exhibitions img,
+.star-artists img,
+.art-mediums img {
     border-radius: 5px;
     height: 250px;
     object-fit: cover;
 }
 
-.featured-exhibition h2, .exciting-exhibitions h2, .star-artists h2, .art-mediums h2{
+.featured-exhibition h2,
+.exciting-exhibitions h2,
+.star-artists h2,
+.art-mediums h2 {
     font-weight: 700;
 }
 
@@ -87,15 +100,16 @@ a,a:hover{
     object-fit: cover;
 }
 
-.featured-exhibition h5{
+.featured-exhibition h5 {
     color: var(--redish);
     text-align: center;
     margin: 2em 0;
 }
 
-.single-featured img{
+.single-featured img {
     height: 350px;
     object-fit: cover;
+    width: 100%;
 }
 
 .woocommerce div.product div.images img {
@@ -120,15 +134,17 @@ a,a:hover{
     width: 100% !important;
 }
 
-input.input-text.qty.text::-webkit-outer-spin-button, input.input-text.qty.text::-webkit-inner-spin-button {
+input.input-text.qty.text::-webkit-outer-spin-button,
+input.input-text.qty.text::-webkit-inner-spin-button {
     opacity: 1;
 }
 
-p.price, span.woocommerce-Price-amount.amount{
+p.price,
+span.woocommerce-Price-amount.amount {
     color: var(--redish) !important;
 }
 
-p.price{
+p.price {
     font-size: 1.1em !important;
     font-weight: 500;
 }
@@ -141,3 +157,28 @@ span.woocommerce-input-wrapper>input {
     padding: 8px;
 }
 
+.woocommerce-checkout p.woocommerce-notice {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--redish);
+}
+
+.woocommerce-checkout p.thankyou-note {
+    margin-bottom: 40px;
+    padding: 0 0 5px 20px;
+    border-left: solid 5px var(--brown);
+}
+
+input {
+    padding: inherit;
+}
+
+.summary .quantity input {
+    padding: 5px 0;
+}
+
+.woocommerce-thankyou-order-received {
+    margin: 2em auto;
+    display: block;
+    text-align: center;
+}

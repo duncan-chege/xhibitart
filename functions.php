@@ -103,8 +103,13 @@ function cart_on_checkout_page() {
 //Remove add to cart message
 add_filter( 'woocommerce_add_message', '__return_false' );
 
+//Remove related products output in single page
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
 //Cart page has been set to checkout page on woocommerce settings-advanced section
 
 //Add to cart text has been set to Book Ticket on Fooevents settings-general section
+
+//Changed thankyou url on woocommerce settings-advanced section
 
 ?>

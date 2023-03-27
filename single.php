@@ -10,6 +10,7 @@
             <?php the_content(); ?>
             <div class="text-center my-5">
             </div>
+            <a href="<?php echo home_url(); ?>" class="back-exhibitions">Back to Exhibitions </a>
         </div>
     </div>
 </div>
