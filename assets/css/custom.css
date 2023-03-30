@@ -173,6 +173,10 @@ input {
     padding: inherit;
 }
 
+.woocommerce-checkout #payment ul.payment_methods li input{
+    width: auto;
+}
+
 .summary .quantity input {
     padding: 5px 0;
 }
@@ -182,3 +186,4 @@ input {
     display: block;
     text-align: center;
 }
+

@@ -41,7 +41,7 @@
                         );
                     ?>
 
-                    <button type="button" class="btn btn-dark"> Curator SignUp </button>
+                    <button type="button" class="btn btn-dark"> Curator Application </button>
                 </div>
                 <!-- End -->
             </div>

@@ -22,6 +22,7 @@ defined( 'ABSPATH' ) || exit;
 
 
 	<?php
+
 	if ( isset($_GET['order'])) :
 
 		do_action( 'woocommerce_before_thankyou', $order->get_id() );
@@ -83,7 +84,8 @@ defined( 'ABSPATH' ) || exit;
 	<?php else : ?>
 
 		<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Thank you for buying your ticket and supporting visual art in Kenya!', 'woocommerce' ), null ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-
+		<p class="woocommerce-thankyou-order-received">Check your email to download your ticket </p>
+		<a href="<?php echo home_url(); ?>" class="back-exhibitions" style="margin: 0 auto; width: fit-content; display: block;">Back to Exhibitions </a>
 	<?php endif; ?>
 
 </div>
