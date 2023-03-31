@@ -34,7 +34,7 @@
                 <a href="<?php echo get_permalink(); ?>">Exhibition Details </a>
                 <?php woocommerce_get_template('loop/add-to-cart.php'); ?>
             </div>
-            
+
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>
 
@@ -77,29 +77,24 @@
             <h2 class=" text-center mb-5"> Star Artists </h2>
         </div>
 
-        <div class="col-md-3">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/artist-placeholder.png"
-                alt="featured exhibition">
-            <h5 class=" mt-3">Vincent Van Goug</h3>
-        </div>
+        <?php 
+            $args = array(
+            'post_type' => 'artists',
+            'posts_per_page' => 2, 
+        );
+        
+        $artist_q = new WP_Query($args); ?>
 
-        <div class="col-md-3">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/artist-placeholder.png"
-                alt="featured exhibition">
-            <h5 class=" mt-3">Vincent Van Goug</h3>
-        </div>
+        <?php if($artist_q->have_posts()) : ?>
+        <?php while ($artist_q->have_posts()) : $artist_q->the_post(); ?>
 
-        <div class="col-md-3">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/artist-placeholder.png"
-                alt="featured exhibition">
-            <h5 class=" mt-3">Vincent Van Goug</h3>
+        <div class="col-md-3 text-center">
+            <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail(); ?>
+                <h5 class="mt-3"><?php the_title(); ?></h5> </a>
         </div>
-
-        <div class="col-md-3">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/artist-placeholder.png"
-                alt="featured exhibition">
-            <h5 class=" mt-3">Vincent Van Goug</h3>
-        </div>
+        <?php endwhile; ?>
+        <?php endif; ?>
+        <?php wp_reset_postdata(); ?>
     </div>
 
     <div class="row art-mediums">

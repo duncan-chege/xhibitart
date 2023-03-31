@@ -81,11 +81,16 @@ a:hover {
 
 .featured-exhibition img,
 .exciting-exhibitions img,
-.star-artists img,
 .art-mediums img {
     border-radius: 5px;
     height: 250px;
     object-fit: cover;
+}
+
+.star-artists img{
+    border-radius: 50%;
+    height: 170px;
+    width: auto;
 }
 
 .featured-exhibition h2,
@@ -187,3 +192,8 @@ input {
     text-align: center;
 }
 
+.single-artists .artist-img img {
+    height: 180px;
+    width: auto;
+    border-radius: 50%;
+}
