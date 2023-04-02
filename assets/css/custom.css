@@ -81,10 +81,17 @@ a:hover {
 
 .featured-exhibition img,
 .exciting-exhibitions img,
-.art-mediums img {
+.art-mediums img,
+.exhibition-sxn img {
     border-radius: 5px;
     height: 250px;
     object-fit: cover;
+    width: 100%;
+    margin: 1.2em 0;
+}
+
+.exhibition-sxn img{
+    height: 120px;
 }
 
 .star-artists img{
@@ -228,4 +235,15 @@ input {
 .dashboard-link {
     margin-right: 2em;
     color: var(--redish);
+}
+
+.welcome-txt{
+    margin: 2em;
+    text-align: center;
+}
+
+.exhibition-sxn h4 {
+    width: fit-content;
+    color: var(--redish);
+    border-bottom: 3px solid;
 }
