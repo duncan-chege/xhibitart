@@ -66,11 +66,11 @@ a:hover {
 
 .exhibition-prompts a:last-child,
 .book-slot, .back-exhibitions {
-    color: #1d1d1d;
+    color: #fff;
     background: #c87513;
     padding: 13px 15px;
     border-radius: 8px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .exciting-exhibitions,
@@ -196,4 +196,36 @@ input {
     height: 180px;
     width: auto;
     border-radius: 50%;
+}
+
+.artist-sxn img {
+    border-radius: 50%;
+    width: auto;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+
+.artist-sxn h4{
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.artist-sxn a{
+    color: var(--redish);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.form-holder {
+    max-width: 500px;
+    margin: 4em auto;
+}
+
+.send-btn{
+    background-color: var(--redish) !important;
+}
+
+.dashboard-link {
+    margin-right: 2em;
+    color: var(--redish);
 }

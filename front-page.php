@@ -46,7 +46,7 @@
 
     <div class="row exciting-exhibitions">
         <div class="col-md-12">
-            <h2 class=" text-center mb-5"> Exciting Exhibitions This February </h2>
+            <h2 class=" text-center mb-5"> Exciting Exhibitions This April </h2>
         </div>
 
         <?php
@@ -97,7 +97,7 @@
         <?php wp_reset_postdata(); ?>
     </div>
 
-    <div class="row art-mediums">
+    <!-- <div class="row art-mediums">
         <div class="col-md-12 text-center">
             <h2 class=" text-center mb-5"> Art Mediums </h2>
         </div>
@@ -125,7 +125,7 @@
                 alt="featured exhibition">
             <h5 class=" mt-3">Painting</h3>
         </div>
-    </div>
+    </div> -->
 </div>
 
 

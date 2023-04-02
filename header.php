@@ -27,21 +27,11 @@
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <?php
-                        wp_nav_menu( array(
-                        'menu'              => 'primary',
-                        'theme_location'    => 'my-custom-menu',
-                        'depth'             => 1,
-                        'container'         => '',
-                        'container_class'   => '',
-                        'container_id'      => '',
-                        'menu_class'        => 'navbar-nav',
-                        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-                        'walker'            => new wp_bootstrap_navwalker())
-                        );
-                    ?>
+                    <?php if(is_user_logged_in()) { ?>
+                        <a href="<?php echo home_url(); ?>/curator-dashboard" class="dashboard-link">Curator Dashboard </a>                   
+                    <?php } ?> 
 
-                    <button type="button" class="btn btn-dark"> Curator Application </button>
+                    <a role="button" class="btn btn-dark" href="<?php echo home_url(); ?>/curator-application"> Curator Application </a>
                 </div>
                 <!-- End -->
             </div>
