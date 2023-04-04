@@ -247,3 +247,24 @@ input {
     color: var(--redish);
     border-bottom: 3px solid;
 }
+
+.brief-stats p {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #77736b;
+    margin: 0;
+    text-align: center;
+}
+
+.brief-stats h3{
+    text-align: center;
+}
+
+.brief-stats .row>.col-md-3:not(:last-child) {
+    border-right: 2px solid #77736b;
+}
+
+.brief-stats .row>.col-md-3{
+    background-color: #f3e6c4;
+    padding: 1em;
+}

@@ -13,25 +13,43 @@ get_header(); ?>
         echo "<h3 class='welcome-txt'>Welcome ".$current_user->display_name. "</h3>"
     ?>
 
-    <div class=" exhibition-sxn">
-        <?php
-        $args = array(
-            'post_type' => 'product',
-            'posts_per_page' => -1,
-        );
-        $the_query = new WP_Query($args); ?>
+<?php $args = array(
+    'post_type' => 'product',
+); 
+    $xhibitions = new WP_Query($args);
+?>
 
-        <h4>Exhibition stats</h4>
-        <div class="row">
-            <?php if($the_query->have_posts()) : ?>
-            <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-            <div class="col-md-4">
-                <?php the_post_thumbnail(); ?>
-                <h5><?php the_title(); ?></h5>
+<?php $args = array(
+    'post_type' => 'event_magic_tickets',
+); 
+    $tickets = new WP_Query($args);
+?>
+
+<?php $query = array(
+   'post_type' => 'shop_order',
+   'post_status' => 'any'
+);
+
+$orders = new WP_Query($query);
+?>
+    <div class="brief-stats">
+        <div class="row g-0">
+            <div class="col-md-3">
+                <p> Exhibitions Posted </p>
+                <h3><?php echo $xhibitions->found_posts; ?></h3>
             </div>
-            <?php endwhile; ?>
-            <?php wp_reset_postdata(); ?>
-            <?php endif; ?>
+            <div class="col-md-3">
+                <p> Tickets Booked </p>
+                <h3><?php echo $orders->found_posts; ?></h3>
+            </div>
+            <div class="col-md-3">
+                <p> Cash Received </p>
+                <h3>Ksh 1000</h3>
+            </div>
+            <div class="col-md-3">
+                <p> Artists Posted </p>
+                <h3>2</h3>
+            </div>
         </div>
     </div>
 
