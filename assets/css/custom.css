@@ -248,7 +248,7 @@ input {
     border-bottom: 3px solid;
 }
 
-.brief-stats p {
+.brief-stats h5 {
     font-weight: 600;
     font-size: 1.1em;
     color: #77736b;
@@ -256,8 +256,10 @@ input {
     text-align: center;
 }
 
-.brief-stats h3{
+.brief-stats h3, .brief-stats h3 * {
     text-align: center;
+    color: #4d4d4d !important;
+    padding-top: .3em;
 }
 
 .brief-stats .row>.col-md-3:not(:last-child) {
@@ -267,4 +269,31 @@ input {
 .brief-stats .row>.col-md-3{
     background-color: #f3e6c4;
     padding: 1em;
+}
+
+.stat-table {
+    margin: 0 0 3em;
+}
+
+.stat-table h5 {
+    padding: 1em;
+    background: #f3e6c4;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #77736b;
+    margin: 1em 0;
+}
+
+.stat-table p {
+    padding: 0 1em;
+}
+
+a.add-xhibition {
+    margin-top: 4em;
+    display: inline-block;
+    text-align: right;
+    background: var(--brown);
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #fff;
 }
